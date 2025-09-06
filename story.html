@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Degirmen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+    <header class="header">
+        <!-- Main site navigation -->
+        <div class="header__nav-container">
+            <nav class="nav header__nav">
+                <a class="nav__logo" href="index.html">
+                    <img src="img/degirmen-logo.png" alt="Degirmen logo" />
+                </a>
+
+                <ul class="nav__list site-nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+                    <li class="nav__item nav__item--active"><a href="story.html" class="nav__link">Our&nbsp;Story</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact&nbsp;Us</a></li>
+                    <li class="nav__item nav__item--mobile-button">
+                        <a href="reservation.html" class="nav__link nav__link--button">Reserve a Table</a>
+                    </li>
+                </ul>
+
+                <div class="nav__actions">
+                    <button class="nav__cart-button" aria-label="Open cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="nav__cart-badge">0</span>
+                    </button>
+                    <a href="reservation.html" class="nav__button">Reserve a Table</a>
+                    <button class="nav__menu-button" aria-label="Toggle menu">
+                        <span class="nav__menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay"></div>
+    <div class="cart-panel">
+        <div class="cart-panel__header">
+            <h3 class="cart-panel__title">Your Order</h3>
+            <button class="cart-panel__close" aria-label="Close cart">&times;</button>
+        </div>
+        <ul class="cart-panel__body">
+            <!-- Cart items will be rendered here by JavaScript -->
+            <li class="cart-panel__empty-message">Your cart is empty.</li>
+        </ul>
+        <div class="cart-panel__footer">
+            <div class="cart-panel__total">
+                <span>Total:</span>
+                <span class="cart-panel__total-price">$0.00</span>
+            </div>
+            <a href="#" class="cart-panel__checkout-button">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <main>
+        <div class="story">
+            <div class="story__header">
+                <h2 class="section__title">Our Story</h2>
+                <p class="story__subtitle">A Journey of Flavors</p>
+            </div>
+
+            <div class="story__content">
+                <div class="story__main">
+                    <div class="story__image-block">
+                        <img src="img/story_1st.JPG" alt="Degirmen interior - welcome" class="story__image">
+                    </div>
+                    <div class="story__text-block">
+                        <h3 class="story__heading">The Taste of Turkey Around the World</h3>
+                        <p class="story__text">
+                            DEGIRMEN, which means "mill" in Turkish, is a symbol of hard work, movement, and creating something genuine. We put special meaning into this image: just as a mill transforms grain into aromatic bread, we combine the best traditions of Turkish cuisine with the modern rhythm of life, creating dishes that you want to enjoy again and again.
+                        </p>
+                        <p class="story__text">
+                            Our story in Kazakhstan began in 2010 with the opening of our first café in Almaty, near the Green Bazaar. Starting as a modest 50 sq.m bakery, we grew by sharing authentic flavors and warm hospitality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="story__timeline">
+                    <div class="story__milestone">
+                        <div class="story__year">2010</div>
+                        <div class="story__milestone-content">
+                            <h4>Kazakhstan Expansion</h4>
+                            <p>DEGIRMEN arrived in Kazakhstan, opening our first location in Almaty near the Green Bazaar. In just 50 sq.m., we housed a small bakery production facility and café.</p>
+                        </div>
+                    </div>
+                    <div class="story__milestone">
+                        <div class="story__year">2025</div>
+                        <div class="story__milestone-content">
+                            <h4>Modern Production</h4>
+                            <p>Over 60 restaurants in Kazakhstan with two modern factories producing up to 130,000 units of products daily. DEGIRMEN is now a place where traditions meet the convenience and speed of the modern world.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story__team">
+                    <div class="story__text-block">
+                        <h3 class="story__heading">Our Mission</h3>
+                        <p class="story__text">
+                            Our mission is to make delicious and accessible products and dishes in which care and soul are felt. We want every guest who enters DEGIRMEN to feel warmth, like at home.
+                        </p>
+                        <p class="story__text">
+                            We started with the idea of making delicious dishes accessible to everyone, preserving the authenticity of Turkish recipes and adding modern solutions. Today, DEGIRMEN is not just a restaurant chain, but a place where traditions meet the convenience and speed of the modern world.
+                        </p>
+                    </div>
+                    <div class="story__image-block story__image-block--grid">
+                        <img src="img/story01.JPG" alt="Degirmen interior - story 1" class="story__image">
+                        <img src="img/story02.JPG" alt="Degirmen interior - story 2" class="story__image">
+                        <img src="img/story03.jpg" alt="Degirmen interior - story 3" class="story__image">
+                        <img src="img/story04.jpg" alt="Degirmen interior - story 4" class="story__image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Mobile Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav__item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="menu.html" class="bottom-nav__item">
+            <i class="fas fa-utensils"></i>
+            <span>Menu</span>
+        </a>
+        <a href="story.html" class="bottom-nav__item bottom-nav__item--active">
+            <i class="fas fa-book-open"></i>
+            <span>Story</span>
+        </a>
+        <a href="contact.html" class="bottom-nav__item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        <a href="reservation.html" class="bottom-nav__item">
+            <i class="fas fa-calendar-check"></i>
+            <span>Reserve</span>
+        </a>
+    </nav>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__section footer__section--about">
+                <h3 class="footer__title">Degirmen</h3>
+                <p class="footer__about-text">A taste of tradition in every bite. We serve authentic and delicious dishes made with the freshest ingredients, inspired by our rich heritage.</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="menu.html" class="footer__link">Our Menu</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="story.html" class="footer__link">About Us</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#privacy" class="footer__link">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Contact Us</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"> 236 A Brighton Beach Ave, Brooklyn, NY 11235</li>
+                    <!-- <li class="footer__list-item">📞 +1 234 567 8900</li> -->
+                    <!-- <li class="footer__list-item">✉️ info@degirmen.com</li> -->
+                    <li class="footer__list-item">⏰ Mon-Sun: 7:30 AM - 10:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Follow Us</h3>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Degirmen Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

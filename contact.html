@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Degirmen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+    <header class="header">
+        <!-- Main site navigation -->
+        <div class="header__nav-container">
+            <nav class="nav header__nav">
+                <a class="nav__logo" href="index.html">
+                    <img src="img/degirmen-logo.png" alt="Degirmen logo" />
+                </a>
+
+                <ul class="nav__list site-nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="story.html" class="nav__link">Our&nbsp;Story</a></li>
+                    <li class="nav__item nav__item--active"><a href="contact.html" class="nav__link">Contact&nbsp;Us</a></li>
+                    <li class="nav__item nav__item--mobile-button">
+                        <a href="reservation.html" class="nav__link nav__link--button">Reserve a Table</a>
+                    </li>
+                </ul>
+
+                <div class="nav__actions">
+                    <button class="nav__cart-button" aria-label="Open cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="nav__cart-badge">0</span>
+                    </button>
+                    <a href="reservation.html" class="nav__button">Reserve a Table</a>
+                    <button class="nav__menu-button" aria-label="Toggle menu">
+                        <span class="nav__menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cart-overlay"></div>
+    <div class="cart-panel">
+        <div class="cart-panel__header">
+            <h3 class="cart-panel__title">Your Order</h3>
+            <button class="cart-panel__close" aria-label="Close cart">&times;</button>
+        </div>
+        <ul class="cart-panel__body">
+            <!-- Cart items will be rendered here by JavaScript -->
+            <li class="cart-panel__empty-message">Your cart is empty.</li>
+        </ul>
+        <div class="cart-panel__footer">
+            <div class="cart-panel__total">
+                <span>Total:</span>
+                <span class="cart-panel__total-price">$0.00</span>
+            </div>
+            <a href="#" class="cart-panel__checkout-button">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact-section" id="contact-form" style="display: block;">
+            <div class="contact-section__content">
+                <div class="contact-section__header">
+                    <h1 class="section__title">Get in Touch</h1>
+                    <p class="contact-section__subtitle">We'd love to hear from you. Whether you have a question, a suggestion, or want to make a reservation, feel free to reach out.</p>
+                    <div class="selected-location-display" id="selected-location-display"></div>
+                </div>
+
+                <div class="contact-section__body">
+                    <div class="contact-section__details">
+                        <h3 class="contact-section__heading">Location Information</h3>
+                        <ul class="contact-section__info-list" id="location-info">
+                            <!-- Location info will be populated by JavaScript -->
+                        </ul>
+                        <div class="contact-section__map" id="map">
+                            <iframe
+                                title="Degirmen Location Map"
+                                src="https://www.google.com/maps?q=Degirmen+Restaurant+and+Bakery+236+A+Brighton+Beach+Ave%2C+Brooklyn%2C+NY+11235&output=embed"
+                                width="100%"
+                                height="100%"
+                                style="border:0; width: 100%; height: 100%; filter: invert(90%) hue-rotate(180deg);"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-section__form-container">
+                        <h3 class="contact-section__heading">Send Us a Message</h3>
+                        <form class="contact-form" action="#" method="POST">
+                            <input type="hidden" id="location" name="location" value="">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required autocomplete="name" maxlength="100" pattern="[A-Za-z0-9 .,'-]{1,100}" inputmode="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required autocomplete="email" maxlength="254" inputmode="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required maxlength="120" pattern="[A-Za-z0-9 .,'-?!()]{1,120}" inputmode="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required maxlength="2000" spellcheck="true"></textarea>
+                            </div>
+                            <button type="submit" class="contact-form__submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Mobile Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav__item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="menu.html" class="bottom-nav__item">
+            <i class="fas fa-utensils"></i>
+            <span>Menu</span>
+        </a>
+        <a href="story.html" class="bottom-nav__item">
+            <i class="fas fa-book-open"></i>
+            <span>Story</span>
+        </a>
+        <a href="contact.html" class="bottom-nav__item bottom-nav__item--active">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        <a href="reservation.html" class="bottom-nav__item">
+            <i class="fas fa-calendar-check"></i>
+            <span>Reserve</span>
+        </a>
+    </nav>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__section footer__section--about">
+                <h3 class="footer__title">Degirmen</h3>
+                <p class="footer__about-text">A taste of tradition in every bite. We serve authentic and delicious dishes made with the freshest ingredients, inspired by our rich heritage.</p>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Quick Links</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="menu.html" class="footer__link">Our Menu</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="story.html" class="footer__link">About Us</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#privacy" class="footer__link">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Contact Us</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"> 236 A Brighton Beach Ave, Brooklyn, NY 11235</li>
+                    <!-- <li class="footer__list-item">📞 +1 234 567 8900</li> -->
+                    <!-- <li class="footer__list-item">✉️ info@degirmen.com</li> -->
+                    <li class="footer__list-item">⏰ Mon-Sun: 7:30 AM - 10:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__title">Follow Us</h3>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Degirmen Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 
